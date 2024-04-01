@@ -1,0 +1,252 @@
+{
+	"info": {
+		"_postman_id": "bf1a92ce-417d-4d14-8aee-251a92868b06",
+		"name": "JWT-Security",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "33936986"
+	},
+	"item": [
+		{
+			"name": "http://localhost:9898/auth/token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful POST request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\":\"Aloke\",\n    \"password\":\"Pwd1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:9898/auth/newtoken",
+				"description": "To create token"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9898/auth/validate",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful POST request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\":\"Aloke\",\n    \"password\":\"Pwd1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9898/auth/validate?token=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBbG9rZSIsImlhdCI6MTcxMTkxMTA0OCwiZXhwIjoxNzExOTEyODQ4fQ.9UkTtoGZPlvN2dr0l-5AU-9mDnYsvsITnuFZyPlyhk4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9898",
+					"path": [
+						"auth",
+						"validate"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBbG9rZSIsImlhdCI6MTcxMTkxMTA0OCwiZXhwIjoxNzExOTEyODQ4fQ.9UkTtoGZPlvN2dr0l-5AU-9mDnYsvsITnuFZyPlyhk4"
+						}
+					]
+				},
+				"description": "To create token"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/auth/register",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n\"name\":\"Roy\",\r\n\"password\":\"Pwd2\",\r\n\"email\":\"roy@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/auth/register"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/doordash/37jbd832",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBbG9rZSIsImlhdCI6MTcxMTk5OTMzNywiZXhwIjoxNzEyMDAxMTM3fQ.T7XMkH5uXsByn6clVq-Nzs6cxs2DTqKoMKc94ponwYU"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8081/doordash/37jbd832"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/doordash/v1/37jbd890",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBbG9rZSIsImlhdCI6MTcxMTk5OTMzNywiZXhwIjoxNzEyMDAxMTM3fQ.T7XMkH5uXsByn6clVq-Nzs6cxs2DTqKoMKc94ponwYU"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8081/doordash/v1/37jbd890"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8082/restaurant/orders/status/37jbd832",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBbG9rZSIsImlhdCI6MTcxMTk5OTMzNywiZXhwIjoxNzEyMDAxMTM3fQ.T7XMkH5uXsByn6clVq-Nzs6cxs2DTqKoMKc94ponwYU"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8082/restaurant/orders/status/37jbd832"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8082/restaurant/orders/v1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBbG9rZSIsImlhdCI6MTcxMTk5OTMzNywiZXhwIjoxNzEyMDAxMTM3fQ.T7XMkH5uXsByn6clVq-Nzs6cxs2DTqKoMKc94ponwYU"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n   \"orderId\": \"37jbd894\",\r\n    \"name\": \"CHICKEN BUTTER\",\r\n    \"qty\": 3,\r\n    \"price\": 325.0,\r\n    \"orderDate\": \"2024-04-01T13:16:08.787+00:00\",\r\n    \"status\": \"Processing\",\r\n    \"estimateDeliveryWindow\": 10\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8082/restaurant/orders/v1"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8082/restaurant/orders/v1/status/37jbd890",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBbG9rZSIsImlhdCI6MTcxMTk5OTMzNywiZXhwIjoxNzEyMDAxMTM3fQ.T7XMkH5uXsByn6clVq-Nzs6cxs2DTqKoMKc94ponwYU"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8082/restaurant/orders/v1/status/37jbd890"
+			},
+			"response": []
+		}
+	]
+}
