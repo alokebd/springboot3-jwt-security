@@ -1,0 +1,10 @@
+com\ait\tech\config\CustomUserDetails.class
+com\ait\tech\controller\AuthController.class
+com\ait\tech\repository\UserCredentialRepository.class
+com\ait\tech\config\AuthConfig.class
+com\ait\tech\service\JwtService.class
+com\ait\tech\dto\AuthRequest.class
+com\ait\tech\entity\UserCredential.class
+com\ait\tech\IdentityServiceApplication.class
+com\ait\tech\config\CustomUserDetailsService.class
+com\ait\tech\service\AuthService.class

@@ -1,0 +1,10 @@
+C:\Porjects\source-examples\java-techi-git\ja17\jwt-apigateway-security-main\identity-service\src\main\java\com\ait\tech\config\AuthConfig.java
+C:\Porjects\source-examples\java-techi-git\ja17\jwt-apigateway-security-main\identity-service\src\main\java\com\ait\tech\config\CustomUserDetails.java
+C:\Porjects\source-examples\java-techi-git\ja17\jwt-apigateway-security-main\identity-service\src\main\java\com\ait\tech\config\CustomUserDetailsService.java
+C:\Porjects\source-examples\java-techi-git\ja17\jwt-apigateway-security-main\identity-service\src\main\java\com\ait\tech\repository\UserCredentialRepository.java
+C:\Porjects\source-examples\java-techi-git\ja17\jwt-apigateway-security-main\identity-service\src\main\java\com\ait\tech\controller\AuthController.java
+C:\Porjects\source-examples\java-techi-git\ja17\jwt-apigateway-security-main\identity-service\src\main\java\com\ait\tech\dto\AuthRequest.java
+C:\Porjects\source-examples\java-techi-git\ja17\jwt-apigateway-security-main\identity-service\src\main\java\com\ait\tech\entity\UserCredential.java
+C:\Porjects\source-examples\java-techi-git\ja17\jwt-apigateway-security-main\identity-service\src\main\java\com\ait\tech\service\AuthService.java
+C:\Porjects\source-examples\java-techi-git\ja17\jwt-apigateway-security-main\identity-service\src\main\java\com\ait\tech\service\JwtService.java
+C:\Porjects\source-examples\java-techi-git\ja17\jwt-apigateway-security-main\identity-service\src\main\java\com\ait\tech\IdentityServiceApplication.java
