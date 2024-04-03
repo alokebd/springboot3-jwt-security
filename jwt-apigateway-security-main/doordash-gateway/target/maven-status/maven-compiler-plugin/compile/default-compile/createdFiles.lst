@@ -1,6 +1,0 @@
-com\ait\tech\config\AppConfig.class
-com\ait\tech\filter\AuthenticationFilter.class
-com\ait\tech\filter\AuthenticationFilter$Config.class
-com\ait\tech\filter\RouteValidator.class
-com\ait\tech\util\JwtUtil.class
-com\ait\tech\DoorDashGatewayApplication.class
